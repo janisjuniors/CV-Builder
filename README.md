@@ -1,5 +1,5 @@
 <h1>CV Builder</h1>
-<p>Application for CV creation with dowload feature.</p>
+<p>Application for CV creation with download feature.</p>
 <p>Technologies used:</p>
 <ul>
     <li>PHP 8</li>
@@ -10,10 +10,20 @@
     <li>Docker v20.10</li>
 </ul>
 <br>
-<p>Download CV View</p>
+<p align="center">Download CV View</p>
+
+<div align="center">
 
 ![Screenshot from 2022-09-22 15-31-41](https://user-images.githubusercontent.com/104723218/191785664-bc11c95b-ee3d-42dd-81a4-5acab8042084.png)
-<p>To download CV and get the expected result make sure to switch margins to none and background graphics turned on.</p>
+
+</div>
+
+<p>To download CV and get the expected result make sure to:</p>
+<ul>
+    <li>Switch margins to none</li>
+    <li>Turn on background graphics</li>
+    <li>Turn off headers</li>
+</ul>
 
 
 <h2>Instructions To Set Up Project With Laravel Sail</h2>
@@ -43,7 +53,8 @@ docker run --rm \
 ./vendor/bin/sail php artisan key:generate
 ./vendor/bin/sail php artisan migrate
 ./vendor/bin/sail php artisan db:seed
-./vendor/bin/sail npm install && npm run dev
+./vendor/bin/sail npm install
+./vendor/bin/sail npm run dev
 </pre>
 
 <p>After running all the above commands open <a href="http://127.0.0.1:8000/">localhost</a></p>
