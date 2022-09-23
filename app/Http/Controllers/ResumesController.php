@@ -24,7 +24,7 @@ class ResumesController extends Controller
         return Inertia::render('CreateResume');
     }
 
-    public function create(Request $request)
+    public function store(Request $request)
     {
         CreateResumeService::execute($request->all());
     }

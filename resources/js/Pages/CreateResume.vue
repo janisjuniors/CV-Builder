@@ -120,10 +120,17 @@
                         <SecondaryButton @click="switchCategory('employmentHistorySummary'); resetPositionForm()">
                             Back
                         </SecondaryButton>
-                        <Button @click="switchCategory('employmentHistorySummary'); editPositionIndex !== null ? saveEditedPosition(editPositionIndex) : addToEmploymentList()">
-                            <span v-if="editPositionIndex !== null">Save</span>
-                            <span v-else>Add</span>
-                        </Button>
+                        <div class="flex items-end space-x-3">
+                            <span v-if="jobTitle === null || employer === null || startedJob === null || endedJob === null || descriptionAndAchievements === null" class="flex text-xs">
+                                Fill all input fields.
+                            </span>
+                            <Button
+                                :disabled="jobTitle === null || employer === null || startedJob === null || endedJob === null || descriptionAndAchievements === null"
+                                @click="switchCategory('employmentHistorySummary'); editPositionIndex !== null ? saveEditedPosition(editPositionIndex) : addToEmploymentList()">
+                                <span v-if="editPositionIndex !== null">Save</span>
+                                <span v-else>Add</span>
+                            </Button>
+                        </div>
                     </div>
                 </div>
 
@@ -200,10 +207,17 @@
                         <SecondaryButton @click="switchCategory('educationSummary'); resetEducationForm()">
                             Back
                         </SecondaryButton>
-                        <Button @click="switchCategory('educationSummary'); editEducationIndex !== null ? saveEditedEducationInstitution(editEducationIndex) :  addToEducationSummaryList()">
-                            <span v-if="editEducationIndex !== null">Save</span>
-                            <span v-else>Add</span>
-                        </Button>
+                        <div class="flex space-x-3 items-end">
+                            <span v-if="educationInstitution === null || fieldOfStudy === null || degree === null || startedAt === null || (currentlyAttending === false && endedAt === null)" class="flex text-xs">
+                                Fill all input fields.
+                            </span>
+                            <Button
+                                :disabled="educationInstitution === null || fieldOfStudy === null || degree === null || startedAt === null || (currentlyAttending === false && endedAt === null)"
+                                @click="switchCategory('educationSummary'); editEducationIndex !== null ? saveEditedEducationInstitution(editEducationIndex) :  addToEducationSummaryList()">
+                                <span v-if="editEducationIndex !== null">Save</span>
+                                <span v-else>Add</span>
+                            </Button>
+                        </div>
                     </div>
                 </div>
 
@@ -428,10 +442,6 @@ const resetPositionIndex = () => {
 
 const resetEducationIndex = () => {
     editEducationIndex.value = null
-}
-
-const resetIndex = (index) => {
-    index = null
 }
 
 const addToEmploymentList = () => {

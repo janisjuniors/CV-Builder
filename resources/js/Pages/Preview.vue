@@ -111,8 +111,6 @@
                             <div class="space-y-5">
                                 <div v-for="institutions in educationInstitutions" :key="institutions.id" class="flex space-y-2 flex-col">
                                     <span class="font-bold">{{ institutions.field_of_study }}</span>
-                                    <span>{{ institutions.institution }}</span>
-                                    <span>{{ institutions.degree }}</span>
                                     <span class="text-gray-600" v-if="institutions.currently_attending">
                                         {{ date(institutions.started_at) }} - Current
                                     </span>
@@ -121,6 +119,8 @@
                                             {{ date(institutions.started_at) }} - {{ date(institutions.ended_at) }}
                                         </span>
                                     </span>
+                                    <span>{{ institutions.institution }}</span>
+                                    <span>{{ institutions.degree }}</span>
                                 </div>
                             </div>
                         </div>
@@ -147,7 +147,7 @@ const props = defineProps({
     socials: Array
 })
 
-const color = ref('gray')
+const color = ref('rose')
 const title = props.owner.first_name + ' ' + props.owner.last_name + ' Resume'
 let printTitle = `${props.owner.first_name}_${props.owner.last_name}_Resume`.normalize("NFD").replace(/[\u0300-\u036f]/g, "")
 const changeColor = (colorChoice) => {

@@ -4,17 +4,17 @@
 <ul>
     <li>PHP 8</li>
     <li>MySQL 8</li>
-    <li>Laravel v9.19</li>
+    <li>Laravel v9.30</li>
     <li>Vue.js v3.2</li>
     <li>TailwindCSS v3.1</li>
     <li>Docker v20.10</li>
 </ul>
 <br>
-<p align="center">Download CV View</p>
+<p align="center">CV Preview Page</p>
 
 <div align="center">
 
-![Screenshot from 2022-09-22 15-31-41](https://user-images.githubusercontent.com/104723218/191785664-bc11c95b-ee3d-42dd-81a4-5acab8042084.png)
+![Screenshot from 2022-09-23 20-51-02](https://user-images.githubusercontent.com/104723218/192027619-c8dd6df3-3bbd-4ac9-959b-00d14e6217aa.png)
 
 </div>
 
