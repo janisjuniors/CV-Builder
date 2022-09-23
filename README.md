@@ -1,5 +1,5 @@
 <h1>CV Builder</h1>
-<p>Application for CV creation with download feature.</p>
+<p>Application for CV creation with PDF download feature.</p>
 <p>Technologies used:</p>
 <ul>
     <li>PHP 8</li>
