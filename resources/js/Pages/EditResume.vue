@@ -1,7 +1,7 @@
 <template>
     <AppLayout :title="'Edit ' + owner.first_name + ' ' + owner.last_name + ' CV'">
         <AddEditLayout @change-to="switchCategory" :child-category="category">
-            <div v-if="form.isDirty" class="flex fixed p-5 top-0 justify-end w-full space-x-3">
+            <div v-if="form.isDirty" class="flex fixed p-5 top-20 justify-center w-full space-x-3">
                 <div class="flex items-center text-sm">You have unsaved changes.</div>
                 <form @submit.prevent="updateCV">
                     <DangerButton type="submit" :disabled="form.processing" >Save Changes</DangerButton>
@@ -122,7 +122,9 @@
                         <SecondaryButton @click="switchCategory('employmentHistorySummary'); resetPositionForm()">
                             Back
                         </SecondaryButton>
-                        <Button @click="switchCategory('employmentHistorySummary'); editPositionIndex !== null ? saveEditedPosition(editPositionIndex) : addToEmploymentList()">
+                        <Button
+                            :disabled="jobTitle === null || employer === null || startedJob === null || endedJob === null || descriptionAndAchievements === null"
+                            @click="switchCategory('employmentHistorySummary'); editPositionIndex !== null ? saveEditedPosition(editPositionIndex) : addToEmploymentList()">
                             <span v-if="editPositionIndex !== null">Save</span>
                             <span v-else>Add</span>
                         </Button>
@@ -200,7 +202,9 @@
                         <SecondaryButton @click="switchCategory('educationSummary'); resetEducationForm()">
                             Back
                         </SecondaryButton>
-                        <Button @click="switchCategory('educationSummary'); editEducationIndex !== null ? saveEditedEducationInstitution(editEducationIndex) :  addToEducationSummaryList()">
+                        <Button
+                            :disabled="educationInstitution === null || fieldOfStudy === null || degree === null || startedAt === null"
+                            @click="switchCategory('educationSummary'); editEducationIndex !== null ? saveEditedEducationInstitution(editEducationIndex) :  addToEducationSummaryList()">
                             <span v-if="editEducationIndex !== null">Save</span>
                             <span v-else>Add</span>
                         </Button>

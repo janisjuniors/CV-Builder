@@ -22,8 +22,12 @@
 <ul>
     <li>Switch margins to none</li>
     <li>Turn on background graphics</li>
-    <li>Turn off headers</li>
+    <li>Turn off headers and footers</li>
 </ul>
+<p>
+Depending on the browser, you might need to experiment with the settings for the best pdf result. 
+</p>
+
 
 
 <h2>Instructions To Set Up Project With Laravel Sail</h2>

@@ -11,7 +11,7 @@ return new class extends Migration
         Schema::create('socials', function (Blueprint $table) {
             $table->id();
             $table->foreignId('owner_id')->constrained('owners')->cascadeOnDelete();
-            $table->string('type')->nullable();
+            $table->string('type');
             $table->string('link')->nullable();
         });
     }

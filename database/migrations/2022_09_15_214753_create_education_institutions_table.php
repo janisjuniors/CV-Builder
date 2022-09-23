@@ -15,7 +15,7 @@ return new class extends Migration
             $table->string('field_of_study')->nullable();
             $table->string('degree')->nullable();
             $table->boolean('currently_attending')->nullable();
-            $table->date('started_at');
+            $table->date('started_at')->nullable();
             $table->date('ended_at')->nullable();
         });
     }

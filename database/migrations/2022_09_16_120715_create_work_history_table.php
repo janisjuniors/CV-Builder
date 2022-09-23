@@ -14,8 +14,8 @@ return new class extends Migration
             $table->string('job_title')->nullable();
             $table->string('employer')->nullable();
             $table->text('description')->nullable();
-            $table->date('start');
-            $table->date('end');
+            $table->date('start')->nullable();
+            $table->date('end')->nullable();
         });
     }
 

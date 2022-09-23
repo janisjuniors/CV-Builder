@@ -1,5 +1,5 @@
 <template>
-    <AppLayout title="Create CV">
+    <AppLayout title="Create Resume">
         <AddEditLayout @change-to="switchCategory" :child-category="category">
             <div class="flex justify-center items-center h-screen flex-col space-y-5">
                 <div class="lg:w-[35rem] border shadow p-7 rounded" v-if="category === 'contact'">

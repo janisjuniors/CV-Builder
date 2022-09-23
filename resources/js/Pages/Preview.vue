@@ -25,7 +25,7 @@
             <div :class="canPrint ? 'scale-[1.35]' : ''" class="border flex justify-center items-center border shadow overflow-hidden">
                 <div id="page" ref="page" class="flex flex-row" style="width: 595.28px; height: 842px">
 
-                    <div class="w-1/3 bg-gray-50 text-xs space-y-10 pl-5 pr-7 py-7 overflow-hidden">
+                    <div class="w-1/3 bg-gray-50 text-xs space-y-6 pl-5 pr-7 py-7 overflow-hidden">
                         <div class="flex items-center space-y-7 flex-col">
                             <div class="flex flex-col w-full">
                                 <div :class="headingColor" class="uppercase font-bold text-xl">
@@ -87,7 +87,7 @@
                         </div>
                     </div>
 
-                    <div class="w-2/3 flex text-xs flex-col space-y-10 px-5 pt-7 pb-16">
+                    <div class="w-2/3 flex text-xs flex-col space-y-6 px-5 pt-7 pb-16">
 
                         <div class="flex flex-col space-y-3">
                             <h3 :class="headingColor" class="font-bold uppercase text-sm">About me</h3>
