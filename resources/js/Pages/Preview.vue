@@ -27,7 +27,7 @@
 
                     <div class="w-1/3 bg-gray-50 text-xs space-y-6 pl-5 pr-7 py-7 overflow-hidden">
                         <div class="flex items-center space-y-7 flex-col">
-                            <div class="flex flex-col w-full">
+                            <div v-if="owner.first_name || owner.last_name" class="flex flex-col w-full">
                                 <div :class="headingColor" class="uppercase font-bold text-xl">
                                     {{ owner.first_name }} {{ owner.last_name }}
                                 </div>
@@ -35,15 +35,15 @@
                             </div>
                             <div class="flex flex-col space-y-2 w-full">
                                 <h3 :class="headingColor" class="font-bold uppercase text-sm">Contacts</h3>
-                                <div class="flex items-center space-x-1.5">
+                                <div v-if="owner.phone_number" class="flex items-center space-x-1.5">
                                     <font-awesome-icon icon="fa-solid fa-phone" />
                                     <span>{{ owner.phone_number }}</span>
                                 </div>
-                                <div class="flex items-center space-x-1.5">
+                                <div v-if="owner.email" class="flex items-center space-x-1.5">
                                     <font-awesome-icon icon="fa-solid fa-envelope" />
                                     <span>{{ owner.email }}</span>
                                 </div>
-                                <div class="flex items-center space-x-1.5">
+                                <div v-if="owner.city" class="flex items-center space-x-1.5">
                                     <font-awesome-icon icon="fa-solid fa-location-dot" />
                                     <span v-if="owner.city">{{ owner.city }}, {{ owner.country }}</span>
                                 </div>

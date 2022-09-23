@@ -93,5 +93,13 @@ class DatabaseSeeder extends Seeder
                 'link' => 'https://github.com/janisjuniors',
             ]
         );
+
+        DB::table('socials')->insert(
+            [
+                'owner_id' => $ownerID,
+                'type' => 'website',
+                'link' => 'https://www.youtube.com/',
+            ]
+        );
     }
 }
