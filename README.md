@@ -18,7 +18,7 @@
 
 </div>
 
-<p>To download CV and get the expected result make sure to:</p>
+<p>To download CV and get the expected result in download settings make sure to:</p>
 <ul>
     <li>Switch margins to none</li>
     <li>Turn on background graphics</li>

@@ -13,8 +13,8 @@
                         <ColorThemeButton @click="changeColor('green')" :class="color !== 'green' ? 'bg-lime-600' : ''" class="border-lime-600" :active="color === 'green'"/>
                         <ColorThemeButton @click="changeColor('amber')" :class="color !== 'amber' ? 'bg-amber-600' : ''" class="border-amber-600" :active="color === 'amber'"/>
                         <ColorThemeButton @click="changeColor('rose')" :class="color !== 'rose' ? 'bg-rose-700' : ''" class="border-rose-700" :active="color === 'rose'"/>
-                        <ColorThemeButton @click="changeColor('blue')" :class="color !== 'blue' ? 'bg-blue-800' : ''" class="border-blue-800" :active="color === 'blue'"/>
                         <ColorThemeButton @click="changeColor('violet')" :class="color !== 'violet' ? 'bg-violet-800' : ''" class="border-violet-800" :active="color === 'violet'"/>
+                        <ColorThemeButton @click="changeColor('blue')" :class="color !== 'blue' ? 'bg-blue-800' : ''" class="border-blue-800" :active="color === 'blue'"/>
                     </div>
                 </div>
                 <Button @click="downloadPDF">Download PDF</Button>
