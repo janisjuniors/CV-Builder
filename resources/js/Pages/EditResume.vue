@@ -224,13 +224,14 @@
                 <div class="lg:w-[35rem] border shadow p-7 rounded" v-if="category === 'skills'">
                     <div class="flex justify-between mb-8 flex items-center">
                         <h2 class="font-bold text-xl text-center">Skills</h2>
-                        <Button type="button" class="w-fit" :disabled="form.skills[form.skills.length - 1] === ''" @click="addSkill">Add Skill</Button>
+                        <Button type="button" class="w-fit" :disabled="form.skills[form.skills.length - 1]['skill'] === ''" @click="addSkill">Add Skill</Button>
                     </div>
                     <div v-if="form.skills.length > 0" class="flex flex-col space-y-2 h-96 mb-5 overflow-y-auto">
                         <div class="flex flex-row items-center" v-for="(skill, index) in form.skills" :key="index">
                             <Input type="text" :id="'skill_' + index" v-model="form.skills[index].skill"/>
                             <DeleteButton class="mx-3" @click="removeItem(index, form.skills)"/>
                         </div>
+                        {{ form.skills }}
                     </div>
                     <div  v-else class="h-96 flex justify-center items-center mb-5">Add skills...</div>
 
@@ -243,7 +244,7 @@
                 <div class="lg:w-[35rem] border shadow p-7 rounded" v-if="category === 'languages'">
                     <div class="flex justify-between mb-8 flex items-center">
                         <h2 class="font-bold text-xl text-center">Languages</h2>
-                        <Button type="button" class="w-fit" :disabled="form.languages[form.languages.length - 1] === ''" @click="addLanguage">Add Language</Button>
+                        <Button type="button" class="w-fit" :disabled="form.languages[form.languages.length - 1]['language'] === ''" @click="addLanguage">Add Language</Button>
                     </div>
                     <div v-if="form.languages.length > 0" class="flex flex-col space-y-2 h-96 mb-5 overflow-y-auto">
                         <div class="flex flex-row items-center" v-for="(skill, index) in form.languages" :key="index">
