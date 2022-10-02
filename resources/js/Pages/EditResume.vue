@@ -231,7 +231,6 @@
                             <Input type="text" :id="'skill_' + index" v-model="form.skills[index].skill"/>
                             <DeleteButton class="mx-3" @click="removeItem(index, form.skills)"/>
                         </div>
-                        {{ form.skills }}
                     </div>
                     <div  v-else class="h-96 flex justify-center items-center mb-5">Add skills...</div>
 
